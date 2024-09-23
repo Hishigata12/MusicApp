@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/songs.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%- include('header'); -%>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    </head>
+    <body>
+        <div id="search-div">
+            <div id="search-form-div">
+                <input type="text" name="search" id='search-box' autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="search-results-div">
+                <h1>Hi There!</h1>
+                <h2 id="search-result"></h2>
+                <ul id="song-list"></ul>
+            </div>
+            <div id="table-container"></div> <!-- Container for the table -->
+        </div>
+        <script src="js/songs.js"></script>
+    </body>
+</html>

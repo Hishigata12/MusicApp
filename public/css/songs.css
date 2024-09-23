@@ -1,0 +1,44 @@
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+td {
+    width: 25%;
+    text-align: center;
+
+}
+
+th {
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+#table-container {
+
+}
+
+tr {
+    border: 1px solid black;
+}
+
+#search-btn {
+    width: 10%;
+}
+
+.pdf-thumb {
+    width: 50px;
+}
+
+.icon {
+    width: 10%;
+}
+
+.gp {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.song-name {
+    font-style:italic;
+}
