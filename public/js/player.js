@@ -36,7 +36,7 @@ const main = wrapper.querySelector(".at-main");
 // initialize alphatab
 const settings = {
 // file: "https://www.alphatab.net/files/canon.gp",
-file: 'http://localhost:4000/player/crysta.gp',
+file: 'http://192.168.1.231:4000/player/crysta.gp',
 player: {
     enablePlayer: true,
     soundFont: 'https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/soundfont/sonivox.sf2',
