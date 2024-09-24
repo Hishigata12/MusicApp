@@ -3,10 +3,23 @@
     <head>
         <link rel="stylesheet" href="css/player.css">
         <script src="https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/alphaTab.js"></script>
-        <script src="https://kit.fontawesome.com/b43f0e512e.js"></script>
+        <script src="https://kit.fontawesome.com/b31d929a52.js" crossorigin="anonymous"></script>
         <%- include('header'); -%>
     </head>
     <body>
+        <h2>Select a Song:</h2>
+
+        <!-- Dropdown Menu -->
+        <select id="song-menu">
+            <option value="none">Choose a Song</option>
+            <option value="crysta.gp">Crysta (Terranigma)</option>
+            <option value="Matoyas_Cave.gp">Matoya's Cave (Final Fantasy)</option>
+            <option value="Eyes_On_Me_Final_Fantasy_VIII.gp">Eyes On Me (Final Fantasy 8)</option>
+            <option value="Kugane_Night.gp">Kugane Night (Final Fantasy 14)</option>
+            <option value="item5">Item 5</option>
+        </select>
+    
+    </body>
         <input type="file" id="file-input">
         <p id="fileInfo"></p>
         <div class="at-wrap">

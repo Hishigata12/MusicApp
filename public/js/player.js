@@ -1,23 +1,29 @@
-// fileInput = document.getElementById('file-input')
+fileInput = document.getElementById('file-input')
+songMenu = document.getElementById('song-menu')
 
-// const fDir = 'G:/Other computers/My Computer/Songs/gp7/Video Game/'
-// let fName = ''
+const fDir = 'G:/Other computers/My Computer/Songs/gp7/Video Game/'
+let fName = ''
 
-// fileInput.addEventListener('change', function() {
-//     if (fileInput.files.length > 0) {
-//         const file = fileInput.files[0]
-//         console.log(file)
-//         fileInfo.textContent = file.name;
-//         fName = file.name
-//         console.log(fName)
-//         data = {
-//             path: fDir,
-//             name: fName
-//         }
-//         postReq(data,'/playme')
-//     }
-// })
+songMenu.addEventListener('change', function() {
+  if (songMenu.value != 'none') {
+    loadSong(songMenu.value)
+  }
+})
 
+fileInput.addEventListener('change', function() {
+    if (fileInput.files.length > 0) {
+        const file = fileInput.files[0]
+        fileInfo.textContent = file.name;
+        fName = file.name
+        console.log(fName)
+        data = {
+            path: fDir,
+            name: fName
+        }
+        loadSong(fName)
+    }
+})
+console.log('fname = ' + fName)
 // window.addEventListener('load', function () {
 //     alphaTab.init({
 //       target: '#tabContainer',
@@ -29,14 +35,19 @@
 //     });
 //   });
 
+
+//initialize 
+function loadSong(name) {
+
+
 // load elements
 const wrapper = document.querySelector(".at-wrap");
 const main = wrapper.querySelector(".at-main");
-
+main.innerHTML = ''
 // initialize alphatab
 const settings = {
 // file: "https://www.alphatab.net/files/canon.gp",
-file: 'http://192.168.1.231:4000/player/crysta.gp',
+file: '/player/' + name,
 player: {
     enablePlayer: true,
     soundFont: 'https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/soundfont/sonivox.sf2',
@@ -44,6 +55,7 @@ player: {
 }
 };
 const api = new alphaTab.AlphaTabApi(main, settings);
+
 
   // overlay logic
 const overlay = wrapper.querySelector(".at-overlay");
@@ -223,3 +235,4 @@ const playerIndicator = wrapper.querySelector(
     songPosition.innerText =
       formatDuration(e.currentTime) + " / " + formatDuration(e.endTime);
   });
+}

@@ -6,7 +6,7 @@ jazzJamsBtn = document.querySelector('#jazz-jams-btn')
 playerBtn = document.querySelector('#player-btn')
 
 // const myIP = 'http://127.0.0.1:4000'
-const myIP = '192.168.1.231:4000'
+const myIP = 'http://192.168.1.231:4000'
 
 homeBtn.addEventListener('click', function() {
     window.location.href = '/';
